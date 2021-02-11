@@ -13,9 +13,21 @@ body {
 }
 
 h1 {
-    font-size: 16pt;
+    font-size: 18pt;
     margin: 0 0 10px 0;
     font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 5px 15px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+sup {
+    float: right;
+    font-size: 10.5pt;
+    margin-top: 4px;
+    margin-left: 3px;
 }
 
 p {
