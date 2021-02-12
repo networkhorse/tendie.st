@@ -1,4 +1,4 @@
-var yfinance = "https://tendie.st/tendies";
+var tendieUrl = "https://tendie.st/tendies";
 var result = document.getElementById("result");
 var avgPrice = parseFloat(document.getElementById("avg_price").innerText);
 var currentPrice = document.getElementById("current_price");
@@ -22,5 +22,5 @@ xhr.onreadystatechange = function() {
         refreshResult(closePrices[closePrices.length - 1]);
     }
 }
-xhr.open("GET", yfinance, true);
+xhr.open("GET", tendieUrl, true);
 xhr.send(null);
