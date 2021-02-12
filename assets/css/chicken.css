@@ -12,6 +12,18 @@ body {
     padding: 30px;
 }
 
+@media screen and (max-width: 1240px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+}
+
 h1 {
     font-size: 18pt;
     margin: 0 0 10px 0;
@@ -21,6 +33,12 @@ h1 {
     padding: 5px 15px;
     display: inline-block;
     text-transform: uppercase;
+}
+
+h2 {
+    font-size: 15pt;
+    margin: 50px 0 10px 0;
+    font-weight: 500;
 }
 
 sup {
@@ -38,4 +56,26 @@ p {
 
 strong {
     font-weight: 500;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+th {
+    font-weight: 500;
+}
+
+td {
+    font-weight: 300;
+}
+
+.stonks {
+    color: #32a852;
+}
+
+.oof {
+    color: #c72845;
 }
