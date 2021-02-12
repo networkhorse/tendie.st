@@ -5,7 +5,7 @@ var currentPrice = document.getElementById("current_price");
 var qty = parseFloat(document.getElementById("qty").innerText);
 
 function refreshResult(price) {
-    currentPrice.innerText = "$" + price;
+    currentPrice.innerText = "$" + price.toFixed(2);
     var change = ((avgPrice*qty)-(price*qty)).toFixed(2);
     if (price > avgPrice) {
         result.innerHTML = '<span class="stonks">$' + -change + '</span>';
