@@ -14,13 +14,18 @@ function refreshResult(price) {
     }
 }
 
-var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-    if (xhr.readyState == XMLHttpRequest.DONE) {
-        var response = JSON.parse(xhr.responseText);
-        var closePrices = response["chart"]["result"][0]["indicators"]["quote"][0]["close"];
-        refreshResult(closePrices[closePrices.length - 1]);
+function updateTable() {
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            var response = JSON.parse(xhr.responseText);
+            var closePrices = response["chart"]["result"][0]["indicators"]["quote"][0]["close"];
+            refreshResult(closePrices[closePrices.length - 1]);
+        }
     }
+    xhr.open("GET", tendieUrl, true);
+    xhr.send(null);
 }
-xhr.open("GET", tendieUrl, true);
-xhr.send(null);
+
+updateTable();
+setInterval(updateTable, 10000);
