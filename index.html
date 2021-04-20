@@ -2,27 +2,23 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>tendie.st | Tendie Street</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500&display=swap"> 
-        <link rel="stylesheet" href="assets/css/chicken.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+        <link rel="stylesheet" href="assets/css/tendie.css">
     </head>
     <body>
         <div class="container">
-            <h1>Tendie<sup>ST</sup></h1>
-            <p>Welcome to Tendie Street. And now, a poem from one of Wall Street's Tendie Scavengers.</p>
-        
-            <p>
-                I'm holding on,<br>
-                Just like you.<br>
-                Melvin is a piece of 💩.<br>
-                But that doesn't stop them feeling the hit,<br>
-                Their wallets are draining,<br>
-                I've always been owing.<br>
-                I don't give a fuck.<br>
-                I'm not going.
-            </p>
-        
-            <p>Have an idea for this space? Let me know on Discord: <strong>山姆#1272</strong></p>
+            <h1>Send me some <span id="crypto">Ethereum</span>.</h1>
+            <div class="qr-code">
+                <img src="assets/img/eth.png" id="qr">
+
+                <div class="switcher">
+                    <button id="eth" class="selected">Ethereum</button><button id="btc">Bitcoin</button>
+                </div>
+            </div>
+            <p id="address">0xB896acbf249FA48482aD5BdbC7A7446E471BAF15</p>
+            <p id="footer">Crafted by <a href="https://www.linkedin.com/in/the-lanlord/" target="_blank">Samuel Lewis</a>.</p>
         </div>
+
+        <script src="assets/js/tendie.js"></script>
     </body>
 </html>
